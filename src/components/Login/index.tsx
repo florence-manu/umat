@@ -90,6 +90,7 @@ div{
     input{
         width: 90%;
         padding: 10px;
+        border-radius: 10px;
     }
 }
 `
