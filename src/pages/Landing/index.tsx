@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Header } from "../../components/Header";
+import { Main } from "../../components/Main";
 
 export const Landing = styled.div`
 display: flex;
@@ -9,7 +10,6 @@ align-items: center;
 justify-content: flex-start;
 width: 100%;
 height: 100vh;
-
 `
 
 export function LandingPage() {
@@ -17,6 +17,7 @@ export function LandingPage() {
     return (
         <div>
             <Header />
+            <Main />
         </div>
     )
 }

@@ -1,21 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { Outlet } from "react-router-dom";
 
 export const Container = styled.main`
 background-color: #0A7C72;
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 justify-content: flex-start;
 padding: 15px 30px;
-
+min-height: 78.62vh;
 `
 
 export function Main() {
     
     return (
-        <div>
-
-        </div>
+        <Container>
+            <Outlet />
+        </Container>
     )
 }
