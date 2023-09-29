@@ -9,7 +9,7 @@ flex-direction: column;
 align-items: center;
 justify-content: flex-start;
 padding: 15px 30px;
-min-height: 78.62vh;
+min-height: 82.1vh;
 `
 
 export function Main() {

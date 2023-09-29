@@ -5,9 +5,9 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: flex-start;
-padding: 15px 30px;
+padding: 12px 30px;
 background-color: #03453F;
-gap: 30px;
+gap: 15px;
 `
 
 export const About = styled.div`

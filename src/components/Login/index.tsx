@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "../button";
 import loginbg from "../../images/loginbg.jpg";
+import { Link } from "react-router-dom";
 
 export const Container = styled.main`
 display: flex;
@@ -103,6 +104,7 @@ export function Login() {
                 </Hero>
                 <p>
                     Your Journey Begins Here! Secure your admission by purchasing a Personal Identification Number (PIN)
+                    <Link to="/buy-pin" >click here</Link>
                 </p>
                 <ButtonContainer>
                       <Button color="#4D4D4D" width={160} background="#62F0E4" text="Buy Your Pin"/>
