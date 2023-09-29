@@ -15,7 +15,7 @@ export function Button({width, background, color, text}:Button) {
                 width: `${width}px`,
                 color: color,
                 borderRadius: "10px",
-                height: "50px"
+                height: "40px"
             }}
         >
          {text}
