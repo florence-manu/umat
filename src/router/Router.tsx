@@ -4,7 +4,7 @@ import { LandingPage } from "../pages/Landing";
 import { BuyPin } from "../components/buyPin";
 import { Login } from "../components/Login";
 import { ProvidePersonalDetails } from "../components/buyPin/GhanaianStudent/personalDetails";
-import { Visa } from "../components/buyPin/GhanaianStudent/visa payment";
+import { Payment } from "../components/buyPin/GhanaianStudent/payments";
 
 export function Routing() {
     return (
@@ -14,7 +14,7 @@ export function Routing() {
             <Route path="" element={<Login/>} />
             <Route path="buy-pin" element={<BuyPin />} >
               <Route path="" element={<ProvidePersonalDetails />} />
-              <Route path="payment" element={<Visa /> } />
+              <Route path="payment" element={<Payment /> } />
             </Route>
             <Route path="forgotPassword" element={""} />
             <Route path="ResetPassword" element={""} />

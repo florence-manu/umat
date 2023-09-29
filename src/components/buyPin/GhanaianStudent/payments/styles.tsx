@@ -10,6 +10,10 @@ export const Container = styled.div`
   gap: 20px;
 `;
 
+export const Options = styled.img`
+  width: 200px;
+`;
+
 export const Form = styled.form`
   width: 100%;
   display: flex;
@@ -38,6 +42,10 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    legend {
+      padding-bottom: 40px;
+    }
 
     input {
       border: 1px solid #d0d7de;
@@ -75,10 +83,6 @@ export const SelectNationality = styled.div`
   color: #0a7c72;
 `;
 
-export const Options = styled.img`
-  width: 200px;
-`;
-
 export const OptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -88,6 +92,7 @@ export const OptionsContainer = styled.div`
   gap: 15px;
   text-align: center;
   align-self: flex-start;
+  padding-bottom: 20px;
 `;
 
 export const VisaLogo = styled.img`
