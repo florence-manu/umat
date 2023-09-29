@@ -1,23 +1,22 @@
 import React from 'react';
-import * as Styles from './styles';
-
-function PaymentDetails() {
+import * as styles from "./styles";
+function Momo() {
   return (
     <fieldset className="fieldset2">
       <legend>Payment Details</legend>
-      <div>
+      <styles.Labelled>
         <label htmlFor="network">Mobile Network</label>
         <select placeholder="Choose an option" id="network">
           <option value="">choose an option</option>
           <option value="">choose an option</option>
         </select>
-      </div>
-      <div>
+      </styles.Labelled>
+      <styles.Labelled>
         <label>Phone</label>
         <input type="text" placeholder="Your mobile money line" />
-      </div>
+      </styles.Labelled>
     </fieldset>
   );
 }
 
-export default PaymentDetails;
+export default Momo;

@@ -37,6 +37,10 @@ export const Form = styled.form`
     padding-left: 20px;
   }
 
+.space{
+  gap: 20px;
+}
+
   .fieldset2 {
     width: 100%;
     display: flex;
@@ -52,7 +56,6 @@ export const Form = styled.form`
       background-color: #f6f8fa;
       border-radius: 5px;
       padding: 8px;
-      margin-top: 20px;
       width: 90%;
     }
 
@@ -99,6 +102,31 @@ export const VisaLogo = styled.img`
   position: absolute;
   height: 28px;
   width: 30px;
-  top: 390px;
+  top: 395px;
   left: 690px;
 `;
+
+export const VisaInputs = styled.div`
+display: flex;
+flex-direction: row;
+` 
+
+export const Labelled = styled.section`
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding-bottom: 10px;
+
+input, select{
+  width: 90%;
+   border: 1px solid #d0d7de;
+      background-color: #f6f8fa;
+      border-radius: 5px;
+      padding: 8px;
+}
+
+select{
+  width: 40%;
+}
+
+`

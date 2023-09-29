@@ -45,23 +45,13 @@ export const BigCard = styled.div`
 
 export const SmallCard = styled.div`
   background-color: white;
-  height: 30vh;
+  height: 40vh;
   width: 35%;
   border-radius: 10px;
   box-shadow: 10px 7px 4px #4d4d4d;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 90px;
-    width: 80%;
-    margin: auto;
-  }
 `;
 
 export const Amount = styled.h2`

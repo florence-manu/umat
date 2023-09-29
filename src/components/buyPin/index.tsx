@@ -1,12 +1,12 @@
 import React from "react";
-import styled from "styled-components";
-import { Button } from "../button";
-import { useNavigate, Link, Outlet } from "react-router-dom";
-import { Momopay } from "./GhanaianStudent/momo";
+import { Step1 } from "./GhanaianStudent/processInfo.tsx";
+import { Step2 } from "./GhanaianStudent/processInfo.tsx";
+import { useLocation, Outlet } from "react-router-dom";
 import * as Styles from "./styles";
 
 export function BuyPin() {
-  const navigation = useNavigate();
+  const location = useLocation().pathname;
+  
   return (
     <Styles.Container>
       <h1>GET YOUR ADMISSION PIN</h1>
@@ -15,18 +15,9 @@ export function BuyPin() {
          <Outlet />
         </Styles.BigCard>
         <Styles.SmallCard>
-          <div>
-            <Styles.Amount>120 GHS</Styles.Amount>
-            <Button
-              color="white"
-              text="CHECK OUT"
-              width={200}
-              background="#0A7C72"
-              onClick={() => {
-                navigation("/buy-pin/payment");
-              }}
-            />
-          </div>
+          { 
+           location.includes("payment") ? <Step2 /> :  <Step1 />
+          }
         </Styles.SmallCard>
       </Styles.SectionContainerCard>
     </Styles.Container>
