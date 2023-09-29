@@ -5,7 +5,8 @@ function App() {
   return (
     <>
      <GlobalStyleStyled/>
-     <Routing />
+      <Routing />
+     
     </>
   );
 }
