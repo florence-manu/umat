@@ -1,4 +1,4 @@
-export const instructions = [
+export const instructionsContent = [
     {
         title: "Required Fields",
         message: `Ensure that you fill out all the mandatory fields in the admission form. These fields are marked with an asterisk (*) or are indicated as "required." Incomplete forms may delay your application process.`,

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import instructionsImage from "../../images/intructions.png";
-import { instructions } from "../../../utils/constants";
+import instructions from "../../../images/intructions.png";
+import { instructionsContent } from "../../../utils/constants";
 
 export const Container = styled.article`
 display: flex;
@@ -42,10 +42,10 @@ export function Instructions() {
     
     return (
         <Container>
-            <Image src={instructionsImage} alt="instructions" />
+            <Image src={instructions} alt="instructions" />
             <List>
                 {
-                    instructions.map((item) => <li key={item.id}>
+                    instructionsContent.map((item) => <li key={item.id}>
                         <span><b>{item.title}</b></span>
                         <span>{item.message }</span>
                     </li>)

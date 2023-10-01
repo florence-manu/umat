@@ -8,6 +8,7 @@ import { Payment } from "../components/buyPin/GhanaianStudent/payments";
 import { Successful } from "../components/buyPin/credentials";
 import { Student } from "../pages/student";
 import { Instructions } from "../components/studentApplication/instructions";
+import { GeneralInfo } from "../components/studentApplication/generalInfo";
 
 export function Routing() {
     return (
@@ -23,6 +24,7 @@ export function Routing() {
           </Route>
           <Route path="/student" element={<Student />} >
             <Route path="" element={<Instructions /> } />
+            <Route path="general-info" element={<GeneralInfo />} />
             </Route>
         </Routes>
       </Router>

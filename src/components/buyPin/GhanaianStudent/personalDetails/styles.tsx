@@ -20,6 +20,11 @@ export const Form = styled.form`
   }
 `;
 
+export const NationalityContainer = styled.div`
+display: flex;
+flex-directon: row;
+`
+
 export const SelectNationality = styled.div`
   display: flex;
   flex-direction: row;
