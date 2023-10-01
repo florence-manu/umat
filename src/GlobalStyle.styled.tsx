@@ -11,7 +11,6 @@ export default createGlobalStyle`
     outline: none;
     width: inherit;
     height: inherit;
-    list-style: none;
     background-color: none;
     font-family: "Nunito", sans-serif;
   }`
