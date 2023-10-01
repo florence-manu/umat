@@ -28,13 +28,14 @@ export const SectionContainerCard = styled.div`
   box-shadow: 10px 7px 4px #4d4d4d;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
   padding: 10px 35px;
 `;
 
 export const BigCard = styled.div`
   background-color: white;
-  min-height: 65vh;
+  padding: 10px 0px;
   width: 60%;
   border-radius: 10px;
   box-shadow: 10px 7px 4px #4d4d4d;

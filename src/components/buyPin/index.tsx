@@ -9,16 +9,18 @@ export function BuyPin() {
   
   return (
     <Styles.Container>
-      <h1>GET YOUR ADMISSION PIN</h1>
+      {
+        location.includes("payment") ? <h1>GET YOUR ADMISSION PIN</h1> : <h1>PIN SUCCESSFUL</h1>
+      }
       <Styles.SectionContainerCard>
         <Styles.BigCard>
          <Outlet />
         </Styles.BigCard>
-        <Styles.SmallCard>
+        { location.match("buy-pin/successful") ? "" : <Styles.SmallCard>
           { 
            location.includes("payment") ? <Step2 /> :  <Step1 />
           }
-        </Styles.SmallCard>
+        </Styles.SmallCard>}
       </Styles.SectionContainerCard>
     </Styles.Container>
   );

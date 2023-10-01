@@ -8,6 +8,8 @@ justify-content: flex-start;
 padding: 12px 30px;
 background-color: #03453F;
 gap: 15px;
+box-shadow: 0px 7px 4px #4D4D4D;
+border: 1px solid #4D4D4D;
 `
 
 export const About = styled.div`

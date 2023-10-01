@@ -5,6 +5,8 @@ import { BuyPin } from "../components/buyPin";
 import { Login } from "../components/Login";
 import { ProvidePersonalDetails } from "../components/buyPin/GhanaianStudent/personalDetails";
 import { Payment } from "../components/buyPin/GhanaianStudent/payments";
+import { Successful } from "../components/buyPin/credentials";
+import { Student } from "../pages/student";
 
 export function Routing() {
     return (
@@ -15,10 +17,10 @@ export function Routing() {
             <Route path="buy-pin" element={<BuyPin />} >
               <Route path="" element={<ProvidePersonalDetails />} />
               <Route path="payment" element={<Payment /> } />
+              <Route path="successful" element={<Successful /> } />
             </Route>
-            <Route path="forgotPassword" element={""} />
-            <Route path="ResetPassword" element={""} />
           </Route>
+            <Route path="/student" element={<Student />} />
         </Routes>
       </Router>
     );

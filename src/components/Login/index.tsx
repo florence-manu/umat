@@ -15,7 +15,6 @@ export function Login() {
         </styles.Hero>
         <p>
           Your Journey Begins Here! Secure your admission by purchasing a Personal Identification Number (PIN)
-          <Link to="/buy-pin">click here</Link>
         </p>
         <styles.ButtonContainer>
           <Button
@@ -42,7 +41,9 @@ export function Login() {
             <label>PIN</label>
             <input type="text" placeholder="465656" />
           </div>
-          <Button text="LOGIN" width={300} background="#0A7C72" color="white" />
+          <Button text="LOGIN" width={300} background="#0A7C72" color="white"  onClick={() => {
+              navigation("/student");
+            }}/>
         </styles.Form>
       </styles.LoginSection>
     </styles.Container>
