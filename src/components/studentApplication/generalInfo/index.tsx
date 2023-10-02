@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SelectNationality from "../../Selectnationality";
 import { Select } from "../../inputFields/input";
-import { generalinfo } from "../../../utils/constants/strings/optionsContent";
+import { generalinfo } from "../../../utils/strings/optionsContent";
 import { Buttons } from "../navButtons";
 
 export const Container = styled.form`

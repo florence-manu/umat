@@ -23,7 +23,7 @@ font-size: 14px;
 export interface InputParamaters{
     label: string;
     placeholder?: string;
-    type: string;
+    type?: string;
     value?: string;
     id: string;
     onChange?: () => void;
