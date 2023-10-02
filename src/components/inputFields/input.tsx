@@ -6,6 +6,7 @@ export const InputField = styled.input`
  padding: 5px;
  background-color: #F6F8FA;
  border: 1px solid #D0D7DE;
+ border-radius: 5px;
 `
 
 export const Container = styled.div`
@@ -16,7 +17,7 @@ gap: 10px;
 
 export const Label = styled.label`
 color: #24292F;
-font-weight: 100;
+font-weight: 200;
 font-size: 14px;
 `
 
@@ -67,17 +68,16 @@ export interface OptionContent {
 
 export interface SelectParamaters{
     label: string;
-    value?: string;
     id: string;
     options?: OptionContent[];
 }
 
-export function Select({label, value, id, options}: SelectParamaters) {
+export function Select({label, id, options}: SelectParamaters) {
     
     return (
        <SelectContainer>
             <label htmlFor={id}>{label }</label>
-                    <select name="" id={id} defaultValue={value}>
+                    <select name="" id={id}>
                 {
                 options && options.map((item) => <option value={item.value} key={item.id}>
                        {item.content} 

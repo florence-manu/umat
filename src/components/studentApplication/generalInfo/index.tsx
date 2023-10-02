@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import SelectNationality from "../../Selectnationality";
-import { Select } from "../../inputFields/input";
 import { generalinfo } from "../../../utils/strings/optionsContent";
 import { Buttons } from "../navButtons";
+import { MapInputs } from "../../../utils/functions/map";
 
 export const Container = styled.form`
 display: flex;
@@ -47,17 +47,19 @@ select{
 `
 
 export function GeneralInfo() {
-    
-    return (
-        <Container>
-            <div>
-                <SelectNationality />
-            </div>
-            <Fieldset>
-                <Select label={"Entry Type" } id="Entry-type" options={generalinfo[0]}/>
-                <Select label={"Level" } id="Level" options={generalinfo[1]}/>
-            </Fieldset>
-            <Buttons />
-        </Container>
-    )
+ const inputContents = {
+    content: generalinfo,
+  };
+
+  return (
+    <Container>
+      <div>
+        <SelectNationality />
+      </div>
+      <Fieldset>
+        {MapInputs(inputContents)}
+      </Fieldset>
+      <Buttons />
+    </Container>
+  );
 }
