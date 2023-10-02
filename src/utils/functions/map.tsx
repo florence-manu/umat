@@ -9,7 +9,8 @@ export interface Item{
     label: string;
     options?: OptionContent[];
     placeholder?: string;
-    onChange?: () => void;
+   onChange?: () => void;
+   width?: string;
 }
 
 export interface InputContents {
@@ -29,6 +30,7 @@ export function MapInputs({ content }: InputContents) {
             value={item.value}
             type={item.inputType}
             key={item.id}
+            width={item.width}
           />
         );
       } else {
@@ -38,6 +40,7 @@ export function MapInputs({ content }: InputContents) {
             label={item.label}
             options={item.options}
             key={item.id}
+            width={item.width}
           />
         );
       }

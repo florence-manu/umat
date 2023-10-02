@@ -17,6 +17,7 @@ export const ButtonsContainer = styled.div`
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 23px;
  }
 `
 

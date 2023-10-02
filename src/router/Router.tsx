@@ -9,7 +9,7 @@ import { Successful } from "../components/buyPin/credentials";
 import { Student } from "../pages/student";
 import { Instructions } from "../components/studentApplication/instructions";
 import { GeneralInfo } from "../components/studentApplication/generalInfo";
-import { Biodata } from "../components/studentApplication/biodata";
+import { Biodata } from "../components/studentApplication/biodata/personal";
 
 export function Routing() {
     return (

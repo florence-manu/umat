@@ -63,6 +63,7 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80%;
 `;
 
 export function Student() {
