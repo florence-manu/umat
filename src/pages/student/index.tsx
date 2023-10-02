@@ -34,6 +34,10 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: flex-start;
   padding: 20px  45px;
+
+  a:active{
+   background-color: blue;
+  }
 `;
 
 export const Rainbow = styled.div`
@@ -52,7 +56,7 @@ export const NavLinks = styled(Link)`
 
 export const Section = styled.section`
   background-color: white;
-  padding: 20px;
+  padding:  20px;
   border-radius: 10px;
   box-shadow: 10px -7px 4px #03453FC0;
   border: 1px solid #03453F;
@@ -69,8 +73,8 @@ export function Student() {
         <Sidebar>
           <Rainbow></Rainbow>
           <Navbar>
-            <NavLinks to="/link1">General</NavLinks>
-            <NavLinks to="/link2">Bio data</NavLinks>
+            <NavLinks to="/student/general-info">General</NavLinks>
+            <NavLinks to="/student/bio-info">Bio data</NavLinks>
             <NavLinks to="/link3">Education</NavLinks>
             <NavLinks to="/link4">Programs</NavLinks>
             <NavLinks to="/link5">Summary</NavLinks>

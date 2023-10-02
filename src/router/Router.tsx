@@ -9,6 +9,7 @@ import { Successful } from "../components/buyPin/credentials";
 import { Student } from "../pages/student";
 import { Instructions } from "../components/studentApplication/instructions";
 import { GeneralInfo } from "../components/studentApplication/generalInfo";
+import { Biodata } from "../components/studentApplication/biodata";
 
 export function Routing() {
     return (
@@ -25,6 +26,7 @@ export function Routing() {
           <Route path="/student" element={<Student />} >
             <Route path="" element={<Instructions /> } />
             <Route path="general-info" element={<GeneralInfo />} />
+            <Route path="bio-info" element={<Biodata />} />
             </Route>
         </Routes>
       </Router>

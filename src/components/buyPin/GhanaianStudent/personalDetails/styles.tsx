@@ -20,18 +20,6 @@ export const Form = styled.form`
   }
 `;
 
-export const NationalityContainer = styled.div`
-display: flex;
-flex-directon: row;
-`
-
-export const SelectNationality = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: #0a7c72;
-`;
-
 export const InputConatainer = styled.div`
   display: flex;
   flex-direction: column;

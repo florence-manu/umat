@@ -1,20 +1,44 @@
 import React from 'react';
-import * as Styles from "./buyPin/GhanaianStudent/personalDetails/styles";
+import styled from 'styled-components';
 
-function SelectNationality() {
+
+export const Container = styled.fieldset`
+display: flex;
+flex-directon: row;
+gap: 30px;
+width: 150px;
+`
+
+export const Input = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #0a7c72;
+  width: 130px;
+
+ input {
+   cursor: pointer;
+  }
+`;
+
+
+export function SelectNationality() {
   return (
-    <Styles.NationalityContainer>
-      <fieldset>
+      <Container>
         <div>Student</div>
-        <SelectNationality />
-      </fieldset>
-      <Styles.SelectNationality>
+      <Input>
         <input type="radio" id="Int" value="Int" name="Int" />
         <label htmlFor="Int" id="ghInt">
           International
         </label>
-      </Styles.SelectNationality>
-    </Styles.NationalityContainer>
+      </Input>
+      <Input>
+        <input type="radio" id="Int" value="Int" name="Int" />
+        <label htmlFor="Int" id="ghInt">
+          International
+        </label>
+      </Input>
+      </Container>
   );
 }
 
