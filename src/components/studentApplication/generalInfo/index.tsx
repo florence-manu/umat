@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import SelectNationality from "../../Selectnationality";
-import { Button } from "../../button";
+import { Select } from "../../inputFields/input";
+import { generalinfo } from "../../../utils/constants/strings/optionsContent";
+import { Buttons } from "../navButtons";
 
 export const Container = styled.form`
 display: flex;
@@ -43,24 +45,6 @@ select{
 }
 }
 `
-export const Buttons = styled.div`
- display: flex;
- flex-direction: row;
- gap: 20px;
- justify-content: flex-end;
- position: relative;
-
- p{
-    padding: 0px 8px;
-    color: white;
-    background-color: rgba(225, 225, 225, 0.25);
-    border-radius: 30px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
- }
-`
-
 
 export function GeneralInfo() {
     
@@ -70,34 +54,10 @@ export function GeneralInfo() {
                 <SelectNationality />
             </div>
             <Fieldset>
-                <div>
-                   <label htmlFor="entry-type">Entry Type</label>
-                    <select name="" id="entry-type" defaultValue={"Fresh-graduate"}>
-                        <option value="Fresh-graduate">
-                            Fresh-graduate
-                        </option>
-                        <option value="Post-graduate">
-                            Post-graduate
-                        </option>
-                   </select>
-               </div>
-                <div>
-                   <label htmlFor="Level">Level</label>
-                    <select name="" id="Level">
-                        <option disabled>choose an option</option>
-                        <option>Pre-University</option>
-                        <option>Certificate</option>
-                        <option>Diploma</option>
-                        <option>HND Topup</option>
-                        <option>Bachelors Degree</option>
-                   </select>
-               </div>
+                <Select label={"Entry Type" } id="Entry-type" options={generalinfo[0]}/>
+                <Select label={"Level" } id="Level" options={generalinfo[1]}/>
             </Fieldset>
-            <Buttons>
-                <Button color="white" text="save all" width={80} background="#F4C51A" onClick={()=>{""}}/>
-                <Button color="white" text="next" width={80} background="#2DA44E" paddingRight={30} onClick={() => { "" }} />
-                <p>{`>`}</p>
-            </Buttons>
+            <Buttons />
         </Container>
     )
 }

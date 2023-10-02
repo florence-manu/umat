@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import instructions from "../../../images/intructions.png";
-import { instructionsContent } from "../../../utils/constants";
+import { instructionsContent } from "../../../utils/constants/strings/instructions";
 
 export const Container = styled.article`
 display: flex;
