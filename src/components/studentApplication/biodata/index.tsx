@@ -39,7 +39,7 @@ export function Biodata() {
                     </Link>
                 <Link to={"/student/bio-info/family-details"}>Family Contacts</Link>
                 <Link to={"/student/bio-info/special-conditions"}>Special Conditions</Link>
-                <Link to={""}>Documents</Link>
+                <Link to={"/student/bio-info/documents"}>Documents</Link>
             </NavbarContainer>
             </div>
        <Outlet/>
