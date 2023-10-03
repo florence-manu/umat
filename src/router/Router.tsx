@@ -14,6 +14,7 @@ import { PersonalBio } from "../components/studentApplication/biodata/personal";
 import { FamilyDetails } from "../components/studentApplication/biodata/family";
 import { SpecialCondittions } from "../components/studentApplication/biodata/specialConditions";
 import { BioDocuments } from "../components/studentApplication/biodata/documents";
+import { Education } from "../components/studentApplication/education";
 
 
 export function Routing() {
@@ -37,6 +38,9 @@ export function Routing() {
               <Route path="family-details" element={<FamilyDetails /> } />
               <Route path="special-conditions" element={<SpecialCondittions /> } />
               <Route path="documents" element={<BioDocuments /> } />
+            </Route>
+            <Route path="education" element={<Education />}>
+               
             </Route>
             </Route>
         </Routes>
