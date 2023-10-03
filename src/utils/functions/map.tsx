@@ -1,5 +1,7 @@
 import { Input, Select, SelectParamaters } from "../../components/inputFields/input";
 import { OptionContent } from "../../components/inputFields/input";
+import { Radio } from "../../components/inputFields/input";
+import { SingleRadio } from "../../components/inputFields/input";
 
 export interface Item{
     id: string;
@@ -10,7 +12,8 @@ export interface Item{
     options?: OptionContent[];
     placeholder?: string;
    onChange?: () => void;
-   width?: string;
+  width?: string;
+  Radio?: SingleRadio[];
 }
 
 export interface InputContents {
@@ -33,7 +36,7 @@ export function MapInputs({ content }: InputContents) {
             width={item.width}
           />
         );
-      } else {
+      } else if(item.fieldType === "select"){
         return (
           <Select
             id={item.id}
@@ -43,6 +46,12 @@ export function MapInputs({ content }: InputContents) {
             width={item.width}
           />
         );
+      } else if (item.fieldType === "radio") {
+        return (
+          <Radio
+              RadioOptions={item.Radio}
+          />
+         )
       }
     })
   );

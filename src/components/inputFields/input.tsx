@@ -91,3 +91,58 @@ export function Select({label, id, options, width}: SelectParamaters) {
                </SelectContainer>
     )
 }
+
+
+export const RadioContainer = styled.div`
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #0a7c72;
+`
+
+export const RadioWrapper = styled.fieldset`
+ display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  align-self: flex-start;
+  padding-bottom: 20px;
+`
+
+export interface SingleRadio {
+    value: string;
+    id1: string;
+    id2: string;
+    label: string;
+    default: string;
+}
+
+export interface RadioOptions{
+    RadioOptions?: SingleRadio[];
+}
+
+
+export function Radio({ RadioOptions }: RadioOptions) {
+    
+    return (
+        <RadioWrapper>
+            {
+                RadioOptions && RadioOptions.map(
+                 (item)=><RadioContainer>
+          <input
+          type="radio"
+          id={item.id1}
+          value={item.value}
+        />
+         <label htmlFor={item.id1 } id={item.id2}>
+         {item.label}
+        </label>
+            </RadioContainer>
+             )  
+        }
+            </RadioWrapper>
+    )
+}
