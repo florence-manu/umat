@@ -12,6 +12,7 @@ import { GeneralInfo } from "../components/studentApplication/generalInfo";
 import { Biodata } from "../components/studentApplication/biodata";
 import { PersonalBio } from "../components/studentApplication/biodata/personal";
 import { FamilyDetails } from "../components/studentApplication/biodata/family";
+import { SpecialCondittions } from "../components/studentApplication/biodata/specialConditions";
 
 
 export function Routing() {
@@ -33,6 +34,7 @@ export function Routing() {
               <Route path="" element={<Navigate to={"personal"} /> } />
               <Route path="personal" element={<PersonalBio /> } />
               <Route path="family-details" element={<FamilyDetails /> } />
+              <Route path="special-conditions" element={<SpecialCondittions /> } />
             </Route>
             </Route>
         </Routes>

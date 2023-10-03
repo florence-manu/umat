@@ -49,7 +49,8 @@ export function MapInputs({ content }: InputContents) {
       } else if (item.fieldType === "radio") {
         return (
           <Radio
-              RadioOptions={item.Radio}
+            RadioOptions={item.Radio}
+            Label={item.label}
           />
          )
       }

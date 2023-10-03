@@ -102,7 +102,7 @@ export const RadioContainer = styled.div`
 
 export const RadioWrapper = styled.fieldset`
  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 70%;
   align-items: center;
   justify-content: center;
@@ -117,21 +117,22 @@ export interface SingleRadio {
     id1: string;
     id2: string;
     label: string;
-    default: string;
+    id: string;
 }
 
 export interface RadioOptions{
+    Label: string;
     RadioOptions?: SingleRadio[];
 }
 
 
-export function Radio({ RadioOptions }: RadioOptions) {
-    
+export function Radio({ RadioOptions, Label }: RadioOptions) {
+                <p>{Label}:</p>
     return (
         <RadioWrapper>
             {
                 RadioOptions && RadioOptions.map(
-                 (item)=><RadioContainer>
+                 (item)=><RadioContainer key={item.id}>
           <input
           type="radio"
           id={item.id1}
