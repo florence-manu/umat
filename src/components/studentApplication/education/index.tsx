@@ -33,9 +33,9 @@ export function Education() {
             <div className="wrapper">
                 <NavbarContainer>
                     <Link
-                        to={"/student/education/institutions"}
+                        to={"/student/education/instituitions"}
                     >
-                       Institutions 
+                       Instituitions 
                     </Link>
                 <Link to={"/student/education/results"}>Exams Results</Link>
                 <Link to={"/student/education/documents"}>Documents</Link>
