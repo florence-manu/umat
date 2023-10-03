@@ -7,6 +7,7 @@ export const InputField = styled.input`
  background-color: #F6F8FA;
  border: 1px solid #D0D7DE;
  border-radius: 5px;
+margin-bottom: 10px;
 `
 
 export const Container = styled.div`

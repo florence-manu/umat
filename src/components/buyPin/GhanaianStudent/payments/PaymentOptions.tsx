@@ -22,6 +22,7 @@ function PaymentOptions({ onPaymentMethodChange }: PaymentOptionsProps) {
           value="credit-card"
           name="payment-option"
           onChange={handleOptionChange}
+          defaultChecked
         />
         <label htmlFor="credit" id="card">
           Credit card

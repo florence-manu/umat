@@ -75,8 +75,8 @@ export function Student() {
           <Rainbow></Rainbow>
           <Navbar>
             <NavLinks to="/student/general-info">General</NavLinks>
-            <NavLinks to="/student/bio-info">Bio data</NavLinks>
-            <NavLinks to="/link3">Education</NavLinks>
+            <NavLinks to="">Bio data</NavLinks>
+            <NavLinks to="">Education</NavLinks>
             <NavLinks to="/link4">Programs</NavLinks>
             <NavLinks to="/link5">Summary</NavLinks>
           </Navbar>

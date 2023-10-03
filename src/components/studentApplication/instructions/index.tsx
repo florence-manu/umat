@@ -9,8 +9,11 @@ flex-direction: column;
 align-items: space-between;
 justify-content: center;
 gap: 30px;
+width: 90%;
 
 div{
+width: 100%;
+
     p{
         color: #C8102E;
     }
@@ -26,6 +29,7 @@ export const List = styled.ol`
 display: flex;
 flex-direction: column;
 gap: 25px;
+width: 100%;
 
 li{
    display: flex;

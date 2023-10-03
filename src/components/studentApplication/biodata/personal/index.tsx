@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { MapInputs } from "../../../../utils/functions/map";
-import { fieldset1 } from "../../../../utils/strings/biodata";
-import { fieldset2 } from "../../../../utils/strings/biodata";
-import { fieldset3 } from "../../../../utils/strings/biodata";
-import { fieldset4 } from "../../../../utils/strings/biodata";
-import { fieldset5 } from "../../../../utils/strings/biodata";
+import { fieldset1 } from "../../../../utils/strings/biodata/personal";
+import { fieldset2 } from "../../../../utils/strings/biodata/personal";
+import { fieldset3 } from "../../../../utils/strings/biodata/personal";
+import { fieldset4 } from "../../../../utils/strings/biodata/personal";
+import { fieldset5 } from "../../../../utils/strings/biodata/personal";
 import upload from "../../../../images/upload.png";
 import { Buttons } from "../../navButtons";
 
@@ -45,7 +45,7 @@ width: 90%;
 cursor: pointer;
 `
 
-export function Biodata() {
+export function PersonalBio() {
     const fieldset1Content = {
     content: fieldset1,
   };
