@@ -19,6 +19,7 @@ import { Institutions } from "../components/studentApplication/education/institu
 import { ExamsResults } from "../components/studentApplication/education/examResult";
 import { EducationalDocuments } from "../components/studentApplication/education/documents";
 import { Programs } from "../components/studentApplication/programs";
+import { ProgramsSelection } from "../components/studentApplication/programs/selection";
 
 
 export function Routing() {
@@ -51,7 +52,7 @@ export function Routing() {
             </Route>
             <Route  path="programs" element={<Programs />}>
               <Route path="" element={<Navigate to={"programs-selection"} />} />
-              <Route path="programs-selection" element={<h1>Hello I am a components</h1> } />
+              <Route path="programs-selection" element={<ProgramsSelection /> } />
             </Route>
             </Route>
         </Routes>

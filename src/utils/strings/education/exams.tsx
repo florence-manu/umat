@@ -273,7 +273,7 @@ export const fieldset5 = [
         label: "Electives",
         width: "100%",
     options: [{
-      value: "Choose a subject",
+      value: "Choose a",
       content: "Goverment",
       id: "01",
     },{
