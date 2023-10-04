@@ -86,8 +86,12 @@ export function Student() {
             <NavLinks to="/student/education"
                 className = {location.includes("/student/education") ? "active" : ""}
             >Education</NavLinks>
-            <NavLinks to="">Programs</NavLinks>
-            <NavLinks to="/link5">Summary</NavLinks>
+            <NavLinks
+              to="/student/programs"
+            >
+              Programs
+            </NavLinks>
+            <NavLinks to="">Summary</NavLinks>
           </Navbar>
         </Sidebar>
         <Section>

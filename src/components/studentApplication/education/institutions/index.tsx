@@ -81,7 +81,6 @@ export function Card1() {
                         <li><Record text1="2021-MAY / JUNE"/></li>
                     </ul>
                 </Records>
-                 <Buttons />
             </RecordsContaner>
     )
 }
