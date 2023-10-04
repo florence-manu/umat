@@ -25,7 +25,9 @@ export const InputConatainer = styled.div`
   flex-direction: column;
 
   label {
-    color: #0a7c72;
+    color: #03453F;
+    font-weight: bold;
+    font-size: 14px;
     width: 50%;
   }
 
@@ -38,6 +40,10 @@ export const InputConatainer = styled.div`
     width: 90%;
   }
 
+   ::placeholder{
+      color: #6E7781;
+    }
+
   select {
     margin-top: 30px;
     width: 65%;
@@ -45,5 +51,9 @@ export const InputConatainer = styled.div`
     background-color: white;
     border-radius: 5px;
     padding: 5px;
+
+    option{
+      color: #24292F;
+    }
   }
 `;

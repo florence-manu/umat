@@ -6,9 +6,17 @@ import successImage from "../../../images/successImage.png";
 export const Container = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-between;
 align-items: center;
-width: 90%;
+width: 85%;
+gap: 30px;
+padding: 20px 0px;
+
+div{
+    img{
+        width: 100%;
+        height: 200px;
+    }
+}
 `
 
 export const Credentials = styled.div`
@@ -17,6 +25,14 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 gap: 20px;
+width: 120%;
+
+.credentials{
+    span{
+        color: #CCCCCC;
+        font-weight: bold;
+    }
+}
 
 div{
      display: flex;
@@ -36,6 +52,7 @@ flex-direction: column;
 
 a{
     color: #009688;
+    font-weight: bold;
 }
 `
 
@@ -47,16 +64,17 @@ export function Successful() {
         <Credentials>
                 <p>Your admission credentials are</p>
                 <div>
-                    <p>
+                    <p className="credentials">
                         <span>Serial :</span>
                         <b>123454</b>
                     </p>
-                    <p>
+                    <p className="credentials">
                         <span>PIN :</span>
                         <b>2343434</b>
                     </p>
                 </div>
-                    <p>These credentials has been sent to your email <span className="email">thomasilla@gmail.com</span></p>
+                <p>These credentials has been sent to your email <span className="email"><b>thomasilla@gmail.com</b></span>
+                </p>
                 <div>
                     <Link to="/">Click here to login</Link>
                     </div>

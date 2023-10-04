@@ -6,26 +6,34 @@ export const Container = styled.fieldset`
 display: flex;
 flex-directon: row;
 gap: 30px;
-width: 150px;
+  font-size: 14px;
+
+
+.student{
+  color: #03453F;
+  font-weight: bold;
+}
 `
 
 export const Input = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #0a7c72;
+  color: #0A7C72;
+  font-weight: bold;
   width: 130px;
 
  input {
    cursor: pointer;
   }
+
 `;
 
 
 export function SelectNationality() {
   return (
       <Container>
-        <div>Student</div>
+        <div className='student'>Student</div>
       <Input>
         <input type="radio" id="Int" value="Int" name="Int" />
         <label htmlFor="Int" id="ghInt">
@@ -33,9 +41,9 @@ export function SelectNationality() {
         </label>
       </Input>
       <Input>
-        <input type="radio" id="Int" value="Int" name="Int" />
+        <input type="radio" id="Int" value="Int" name="Int" defaultChecked/>
         <label htmlFor="Int" id="ghInt">
-          International
+          Ghanaian
         </label>
       </Input>
       </Container>

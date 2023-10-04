@@ -23,11 +23,8 @@ a{
     font-size: 13px;
     margin-right: 30px;
 }
-
-.active{
-    border-bottom: 2px solid #F4C51A;
-}
 `
+
 export function Education() {
     const location = useLocation().pathname;
     return (

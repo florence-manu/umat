@@ -87,6 +87,20 @@ export const Nav = styled.ul`
    .link{
     a{
     color:  #62F0E4; 
+
+    .user{
+     width: 35px;
+     height: 35px;
+     padding: 2px;
+     border-radius: 50%;
+     border: 1px solid #62F0E4;
+    }
+    }
+
+    :last-child{
+
     }
    }
+
+
 `

@@ -7,7 +7,7 @@ function Visa() {
     <fieldset className="fieldset2 space">
       <input type="text" placeholder="CARD NUMBER" />
       <Styles.VisaLogo src={visalogo} alt="" />
-      <input type="text" placeholder="CARD HOLDER NAME Darkoh" />
+      <input type="text" placeholder="CARD HOLDER NAME" />
       <Styles.VisaInputs>
         <input type="text" placeholder="12" className="inp1" />
         <input type="text" placeholder="23" className="inp2" />

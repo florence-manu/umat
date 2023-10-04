@@ -13,4 +13,15 @@ export default createGlobalStyle`
     height: inherit;
     background-color: none;
     font-family: "Nunito", sans-serif;
-  }`
+  }
+
+   .side-bar-active{
+   color: #28A745 !important;
+  }
+
+  
+.active{
+    border-bottom: 2px solid #F4C51A;
+
+}
+  `

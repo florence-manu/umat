@@ -14,7 +14,7 @@ function PaymentOptions({ onPaymentMethodChange }: PaymentOptionsProps) {
 
   return (
     <fieldset>
-      <div>Payment Options</div>
+      <div className='option'>Payment Options</div>
       <Styles.SelectNationality>
         <input
           type="radio"

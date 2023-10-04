@@ -33,7 +33,7 @@ export function Payment() {
       <Styles.Form>
         {paymentMethod === 'credit-card' ? <Visa /> : <Momo />}
         <div className="buttonContainer">
-          <Button text="Confirm payment" background="#0A7C72" color="white" width={200} onClick={() => {navigate("/buy-pin/successful")}} />
+          <Button text="Confirm payment" background="#009688" color="white" width={200} weight="bold" onClick={() => {navigate("/buy-pin/successful")}} />
         </div>
       </Styles.Form>
     </Styles.Container>

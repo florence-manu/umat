@@ -25,11 +25,6 @@ a{
     font-size: 13px;
     margin-right: 30px;
 }
-
-.active{
-    border-bottom: 2px solid #F4C51A;
-
-}
 `
 export function Biodata() {
     const location = useLocation().pathname;

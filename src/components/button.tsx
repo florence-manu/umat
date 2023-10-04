@@ -6,10 +6,11 @@ export interface ButtonProps {
   color: string;
   text: string;
   paddingRight?: number;
+  weight?: string;
   onClick?: () => void;
 }
 
-export function Button({ width, background, color, text, paddingRight, onClick }: ButtonProps) {
+export function Button({ width, background, color, weight, text, paddingRight, onClick }: ButtonProps) {
   return (
     <button
       style={{
@@ -23,6 +24,7 @@ export function Button({ width, background, color, text, paddingRight, onClick }
         alignItems: "center",
         justifyContent: "center",
         paddingRight: `${paddingRight}px`,
+        fontWeight: weight
       }}
       onClick={onClick}
     >

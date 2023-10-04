@@ -31,6 +31,11 @@ export const SectionContainerCard = styled.div`
   justify-content: center;
   gap: 50px;
   padding: 10px 35px;
+
+  .max{
+    width: 100%;
+    font-size: 15px;
+  }
 `;
 
 export const BigCard = styled.div`

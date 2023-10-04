@@ -35,7 +35,8 @@ export function Routing() {
             </Route>
           </Route>
           <Route path="/student" element={<Student />} >
-            <Route path="" element={<Instructions /> } />
+            <Route path="" element={<Navigate to="instructions" /> } />
+            <Route path="instructions" element={<Instructions /> } />
             <Route path="general-info" element={<GeneralInfo />} />
             <Route path="bio-info" element={<Biodata />} >
               <Route path="" element={<Navigate to={"personal"} /> } />

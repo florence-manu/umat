@@ -24,9 +24,6 @@ a{
     margin-right: 30px;
 }
 
-.active{
-    border-bottom: 2px solid #F4C51A;
-}
 `
 export function Programs() {
     const location = useLocation().pathname;

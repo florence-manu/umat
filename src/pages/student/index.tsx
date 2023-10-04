@@ -34,10 +34,6 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: flex-start;
   padding: 20px  45px;
-
-  .active{
-   color: #28A745;
-  }
 `;
 
 export const Rainbow = styled.div`
@@ -78,17 +74,17 @@ export function Student() {
           <Rainbow></Rainbow>
           <Navbar>
             <NavLinks to="/student/general-info"
-             className = {location.includes("/student/general-info") ? "active" : ""}
+             className = {location.includes("/student/general-info") ? "side-bar-active" : ""}
             >General</NavLinks>
             <NavLinks to="/student/bio-info"
-                className = {location.includes("/student/bio-info") ? "active" : ""}
+                className = {location.includes("/student/bio-info") ? "side-bar-active" : ""}
             >Bio data</NavLinks>
             <NavLinks to="/student/education"
-                className = {location.includes("/student/education") ? "active" : ""}
+                className = {location.includes("/student/education") ? "side-bar-active" : ""}
             >Education</NavLinks>
             <NavLinks
               to="/student/programs"
-              className = {location.includes("/student/programs") ? "active" : ""}
+              className = {location.includes("/student/programs") ? "side-bar-active" : ""}
             >
               Programs
             </NavLinks>

@@ -30,6 +30,13 @@ export const Form = styled.form`
     label {
       width: 150%;
     }
+
+    .option{
+      color: #03453F;
+      font-weight: bold;
+      font-size: 14px;
+      margin-right: 70px;
+    }
   }
 
   .buttonContainer {
@@ -82,8 +89,19 @@ export const Form = styled.form`
 export const SelectNationality = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 5px;
   color: #0a7c72;
+
+  label{
+    color: #0A7C72;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  input{
+    width: 30px;
+    margin-right: 7px;
+  }
 `;
 
 export const OptionsContainer = styled.div`
@@ -103,7 +121,7 @@ export const VisaLogo = styled.img`
   height: 28px;
   width: 30px;
   top: 395px;
-  left: 690px;
+  left: 680px;
 `;
 
 export const VisaInputs = styled.div`
