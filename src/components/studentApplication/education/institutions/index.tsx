@@ -15,9 +15,10 @@ import { Buttons } from "../../navButtons";
 
 
 export interface Background {
-    school: string;
-    flag: string;
-    status: string;
+    text1: string;
+    flag?: string;
+    status?: string;
+    alt?: string;
 }
 
 export const RecordsContainer = styled.div`
@@ -42,16 +43,46 @@ p{
    }
 `
 
-export function Record({school, status, flag}: Background) {
+export function Record({text1, status, flag, alt}: Background) {
     
     return (
         <RecordsContainer>
-            <img src={flag} alt="flag" />
-            <p className="school">{school}</p>
+            <img src={flag} alt={alt} />
+            <p className="school">{text1}</p>
             <p>{status}</p>
-            <img src={edit} alt="edit" />
-            <img src={Delete} alt="delete" />
+            <img src={edit}  alt={alt} />
+            <img src={Delete}  alt={alt} />
         </RecordsContainer>
+    )
+}
+
+export function Card() {
+    return (
+        <RecordsContaner>
+                <Records>
+                    <p><b>Educational Records</b></p>
+                    <ul>
+                        <li><Record flag={gh} text1="Kings University College" status="stopped"/></li>
+                        <li><Record flag={uk} text1="Holy Home International" status="completed"/></li>
+                        <li><Record flag={gh} text1="Kings University College" status="stopped"/></li>
+                    </ul>
+                </Records>
+                 <Buttons />
+            </RecordsContaner>
+    )
+}
+export function Card1() {
+    return (
+        <RecordsContaner>
+                <Records>
+                    <p><b>WASCE EXAMS INSTANCES</b></p>
+                    <ul>
+                        <li><Record text1="2021-NOV / DEC"/></li>
+                        <li><Record text1="2021-MAY / JUNE"/></li>
+                    </ul>
+                </Records>
+                 <Buttons />
+            </RecordsContaner>
     )
 }
 
@@ -161,17 +192,7 @@ export function Institutions() {
                 </Section>
                 </Inputs>
             </InputsWrapper>
-            <RecordsContaner>
-                <Records>
-                    <p><b>Educational Records</b></p>
-                    <ul>
-                        <li><Record flag={gh} school="Kings University College" status="stopped"/></li>
-                        <li><Record flag={uk} school="Holy Home International" status="completed"/></li>
-                        <li><Record flag={gh} school="Kings University College" status="stopped"/></li>
-                    </ul>
-                </Records>
-                 <Buttons />
-            </RecordsContaner>
+            <Card />
         </Container>
     )
 }
