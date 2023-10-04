@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { Outlet } from "react-router-dom";
 
@@ -35,8 +35,8 @@ export const Navbar = styled.nav`
   justify-content: flex-start;
   padding: 20px  45px;
 
-  a:active{
-   background-color: blue;
+  .active{
+   color: #28A745;
   }
 `;
 
@@ -67,6 +67,9 @@ export const Section = styled.section`
 `;
 
 export function Student() {
+ 
+  const location = useLocation().pathname;
+
   return (
     <>
       <Header />
@@ -74,9 +77,15 @@ export function Student() {
         <Sidebar>
           <Rainbow></Rainbow>
           <Navbar>
-            <NavLinks to="/student/general-info">General</NavLinks>
-            <NavLinks to="/student/bio-info">Bio data</NavLinks>
-            <NavLinks to="/student/education">Education</NavLinks>
+            <NavLinks to="/student/general-info"
+             className = {location.includes("/student/general-info") ? "active" : ""}
+            >General</NavLinks>
+            <NavLinks to="/student/bio-info"
+                className = {location.includes("/student/bio-info") ? "active" : ""}
+            >Bio data</NavLinks>
+            <NavLinks to="/student/education"
+                className = {location.includes("/student/education") ? "active" : ""}
+            >Education</NavLinks>
             <NavLinks to="">Programs</NavLinks>
             <NavLinks to="/link5">Summary</NavLinks>
           </Navbar>

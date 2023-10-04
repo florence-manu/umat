@@ -17,28 +17,35 @@ background-color: #F0F0F0;
 }
 `
 export const NavbarContainer = styled.nav`
-width: 70%;
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
 a{
     text-decoration: none;
     color: #4D4D4D;
+    font-size: 13px;
+    margin-right: 30px;
+}
+
+.active{
+    border-bottom: 2px solid #F4C51A;
 }
 `
 export function Education() {
-    const location = useLocation();
+    const location = useLocation().pathname;
     return (
         <Container>
             <div className="wrapper">
                 <NavbarContainer>
                     <Link
                         to={"/student/education/instituitions"}
+                        className={location.includes("/student/education/instituitions") ? "active" : ""}
                     >
                        Instituitions 
                     </Link>
-                <Link to={"/student/education/results"}>Exams Results</Link>
-                <Link to={"/student/education/documents"}>Documents</Link>
+                    <Link to={"/student/education/exams-results"}
+                       className={location.includes("/student/education/exams-results") ? "active" : ""}
+                    >Exams Results</Link>
+                    <Link to={"/student/education/documents"}
+                      className={location.includes("/student/education/documents") ? "active" : ""}
+                    >Documents</Link>
             </NavbarContainer>
             </div>
        <Outlet/>

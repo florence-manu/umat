@@ -16,6 +16,7 @@ import { SpecialCondittions } from "../components/studentApplication/biodata/spe
 import { BioDocuments } from "../components/studentApplication/biodata/documents";
 import { Education } from "../components/studentApplication/education";
 import { Institutions } from "../components/studentApplication/education/institutions";
+import { ExamsResults } from "../components/studentApplication/education/examResult";
 
 
 export function Routing() {
@@ -41,7 +42,9 @@ export function Routing() {
               <Route path="documents" element={<BioDocuments /> } />
             </Route>
              <Route path="education" element={<Education />}>
+              <Route path="" element={<Navigate to="instituitions" /> } />
               <Route path="instituitions" element={<Institutions /> } />
+              <Route path="exams-results" element={<ExamsResults /> } />
             </Route>
             </Route>
         </Routes>

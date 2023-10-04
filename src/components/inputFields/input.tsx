@@ -20,6 +20,7 @@ export const Label = styled.label`
 color: #24292F;
 font-weight: 200;
 font-size: 14px;
+padding-bottom: 10px;
 `
 
 export interface InputParamaters{
