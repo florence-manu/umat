@@ -88,6 +88,7 @@ export function Student() {
             >Education</NavLinks>
             <NavLinks
               to="/student/programs"
+              className = {location.includes("/student/programs") ? "active" : ""}
             >
               Programs
             </NavLinks>
