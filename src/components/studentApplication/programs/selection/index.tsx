@@ -71,7 +71,7 @@ gap: 5px;
 `
 
 export function ProgramsSelection() {
-    const level = {
+    const levelContent = {
         content: fieldset1
     };
     const program = {
@@ -83,7 +83,7 @@ export function ProgramsSelection() {
     return (
         <Wrapper>
             <Section1>
-                {MapInputs(level)}
+                {MapInputs(program)}
             </Section1>
             <Section2>
                 <div className="heading">
