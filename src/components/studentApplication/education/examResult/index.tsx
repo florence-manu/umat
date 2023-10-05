@@ -7,13 +7,14 @@ import { fieldset2 } from "../../../../utils/strings/education/exams";
 import { fieldset3 } from "../../../../utils/strings/education/exams";
 import { fieldset4 } from "../../../../utils/strings/education/exams";
 import { fieldset5 } from "../../../../utils/strings/education/exams";
+import { examsInstances } from "../../../../utils/strings/education/cardContent";
 import { MapInputs } from "../../../../utils/functions/map";
 import { Button } from "../../../button";
 import { Buttons } from "../../navButtons";
-import { Card1 } from "../institutions";
+import { Card } from "../institutions";
 
 export const Wrapper = styled.div`
-width: 100%;
+width: 95%;
 display: flex;
 flex-direction: column;
 gap: 50px;
@@ -29,7 +30,8 @@ export const Container = styled.div`
 width: 100%;
 display: flex;
 flex-direction: row;
-gap: 5%;
+gap: 3%;
+margin-left: 5%;
 
 `
 
@@ -37,7 +39,7 @@ export const Section = styled.div`
 display: flex;
 flex-direction: column;
 gap: 20px;
-width: 70%;
+width: 72%;
 
 .sub-grades{
     display: flex;
@@ -92,7 +94,9 @@ width: 70%;
 }
 `
 export const Section2 = styled.div`
-width: 30%;
+width: 44%;
+display: flex;
+justify-content: flex-end;
 `
 
 export const Row = styled.div`
@@ -231,7 +235,7 @@ export function ExamsResults() {
                 </Section>
            </Section>
                 <Section2>
-                    <Card1 />
+                    <Card items={examsInstances} heading="WASCE exams instances"/>
             </Section2>
             </Container>
             <div className="buttons">

@@ -9,9 +9,8 @@ import { MapInputs } from "../../../../utils/functions/map";
 import { Button } from "../../../button";
 import edit from "../../../../images/edit.png";
 import Delete from "../../../../images/Delete.png";
-import gh from "../../../../images/ghanaFlag.png";
-import uk from "../../../../images/ukFlag.png";
 import { Buttons } from "../../navButtons";
+import {institutions} from "../../../../utils/strings/education/cardContent";
 
 
 export interface Background {
@@ -19,7 +18,19 @@ export interface Background {
     flag?: string;
     status?: string;
     alt?: string;
+    id: string;
+    display?: string;
 }
+
+export interface BackgroundContent {
+    heading: string;
+    content: Background[];
+}
+export interface CardContent {
+    items: Background[];
+    heading: string;
+}
+
 
 export const RecordsContainer = styled.div`
 display: flex;
@@ -43,44 +54,27 @@ p{
    }
 `
 
-export function Record({text1, status, flag, alt}: Background) {
-    
+export function Record({content, heading}: BackgroundContent) {    
     return (
-        <RecordsContainer>
-            <img src={flag} alt={alt} />
-            <p className="school">{text1}</p>
-            <p>{status}</p>
-            <img src={edit}  alt={alt} />
-            <img src={Delete}  alt={alt} />
-        </RecordsContainer>
+        <Records>
+            <h3>{heading}</h3>
+        {
+               content.map((item)=> <RecordsContainer id={item.id}>
+            <img src={item.flag} alt={item.alt} style={{display: item.display}}/>
+            <p className="school">{item.text1}</p>
+            <p>{item.status}</p>
+            <img src={edit}  alt={"edit"} />
+            <img src={Delete}  alt={"delete"} />
+        </RecordsContainer>)
+        }
+        </Records>
     )
 }
 
-export function Card() {
+export function Card({items, heading}: CardContent) {
     return (
         <RecordsContaner>
-                <Records>
-                    <p><b>Educational Records</b></p>
-                    <ul>
-                        <li><Record flag={gh} text1="Kings University College" status="stopped"/></li>
-                        <li><Record flag={uk} text1="Holy Home International" status="completed"/></li>
-                        <li><Record flag={gh} text1="Kings University College" status="stopped"/></li>
-                    </ul>
-                </Records>
-                 <Buttons />
-            </RecordsContaner>
-    )
-}
-export function Card1() {
-    return (
-        <RecordsContaner>
-                <Records>
-                    <p><b>WASCE EXAMS INSTANCES</b></p>
-                    <ul>
-                        <li><Record text1="2021-NOV / DEC"/></li>
-                        <li><Record text1="2021-MAY / JUNE"/></li>
-                    </ul>
-                </Records>
+            <Record content={items} heading={heading } />
             </RecordsContaner>
     )
 }
@@ -88,14 +82,23 @@ export function Card1() {
 export const Container = styled.div`
 width: 100%;
 display: flex;
-flex-direction: row;
-gap: 5%;
+flex-direction: column;
+gap: 40px;
+
+`
+
+export const Wrapper = styled.div`
+ display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 13%;
 `
 
 export const InputsWrapper = styled.div`
 display: flex;
 flex-direction: column;
 gap: 30px;
+width: 120%;
 
 .nationality{
 
@@ -124,7 +127,6 @@ export const Section = styled.div`
  display: flex;
  flex-direction: row;
 justify-content: space-between;
-
 ` 
 export const ButtonsContainer = styled.div`
   display: flex;
@@ -133,27 +135,36 @@ export const ButtonsContainer = styled.div`
   align-items: flex-end;
 `
 export const RecordsContaner = styled.div`
-width: 95%;
+width: 100%;
 display: flex;
 align-items: flex-start;
-justify-content: flex-end;
-gap: 120px;
+justify-content: flex-start;
+gap: 20px;
 flex-direction: column;
+border-radius: 5px;
+padding: 20px 20px 40px 20px;
 `
 
 export const Records = styled.div`
   background-color: #FCFCFC;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 50px 30px ;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
+    font-size: 13px;
+    padding: 20px 10px 40px 10px;
     box-shadow: 2px 3px 5px 5px #737373;
 
+    
+.school{
+    font-size: 13px;
+    text-align: start;
+}
+
 p{
-    color: #4D4D4D;
+    font-size: 13px;
 }
 
 ul{
@@ -183,7 +194,8 @@ export function Institutions() {
     
     return (
         <Container>
-            <InputsWrapper>
+            <Wrapper>
+              <InputsWrapper>
                 <Section className="nationality">
                     {MapInputs(Nationality)}
                   </Section>
@@ -206,7 +218,9 @@ export function Institutions() {
                 </Section>
                 </Inputs>
             </InputsWrapper>
-            <Card />
+            <Card items={institutions} heading="Education Records"/>
+            </Wrapper>
+            <Buttons />
         </Container>
     )
 }
