@@ -10,6 +10,8 @@ display: flex;
 flex-direction: column;
 align-items: space-between;
 gap: 40px;
+width: 100%;
+padding: 7%;
 
 div{
     :nth-child(1){
@@ -30,12 +32,13 @@ flex-direction: column;
 gap: 10px;
 
 label{
-    font-weight: thin;
+    font-weight: 100;
+    font-size: 15px;
     color: #24292F;
 }
 
 select{
-    width: 40%;
+    width: 55%;
     background-color: inherit;
     padding: 5px;
     border: 1px solid #D0D7DE;

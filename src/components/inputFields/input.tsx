@@ -3,24 +3,29 @@ import styled from "styled-components";
 
 export const InputField = styled.input`
  width: 70%;
- padding: 5px;
+ padding: 8px;
  background-color: #F6F8FA;
  border: 1px solid #D0D7DE;
  border-radius: 5px;
-margin-bottom: 10px;
+ margin-top: -5px;
 `
 
 export const Container = styled.div`
 display: flex;
 flex-direction: column;
 width: 100%;
+
+
+::placeholder{
+    color: #6E7781;
+    font-weight: regular;
+}
 `
 
 export const Label = styled.label`
 color: #24292F;
-font-weight: 200;
+font-weight: lighter;
 font-size: 14px;
-padding-bottom: 10px;
 `
 
 export interface InputParamaters{
@@ -49,8 +54,9 @@ flex-direction: column;
 gap: 10px;
 
 label{
-    font-weight: thin;
+    font-weight: lighter;
     color: #24292F;
+    font-size: 14px;
 }
 
 select{
@@ -59,10 +65,17 @@ select{
     padding: 5px;
     border: 1px solid #D0D7DE;
     border-radius: 5px;
-  cursor: pointer;
+    color: #24292F;
+    font-weight: 600;
 
 }
 `
+export const Option = styled.option`
+color: #24292F;
+font-weight: 600;
+background: white;
+`
+
 export interface OptionContent {
     value: string;
     content: string;
@@ -83,9 +96,9 @@ export function Select({label, id, options, width}: SelectParamaters) {
             <label htmlFor={id}>{label }</label>
                     <select name="" id={id} style={{width: width}}>
                 {
-                options && options.map((item) => <option value={item.value} key={item.id}>
+                options && options.map((item) => <Option value={item.value} key={item.id}>
                        {item.content} 
-                    </option>)
+                    </Option>)
                        }        
                 
                    </select>

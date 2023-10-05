@@ -11,8 +11,9 @@ width: 100%;
 
 .wrapper{
 width: 100%;  
-padding: 10px;
-border-radius: 3px;
+padding: 20px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 background-color: #F0F0F0; 
 }
 `
@@ -22,6 +23,7 @@ a{
     color: #4D4D4D;
     font-size: 13px;
     margin-right: 30px;
+    padding-bottom: 10px;
 }
 `
 

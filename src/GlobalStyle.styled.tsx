@@ -24,4 +24,8 @@ export default createGlobalStyle`
     border-bottom: 2px solid #F4C51A;
 
 }
+
+select{
+  cursor: pointer;
+}
   `

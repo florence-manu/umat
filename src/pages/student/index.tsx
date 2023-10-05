@@ -50,6 +50,14 @@ export const NavLinks = styled(Link)`
   mrgin-top: -10px;
 `;
 
+export const Container = styled.div`
+width: 100%;
+
+.min{
+  width: 50%;
+}
+`
+
 export const Section = styled.section`
   background-color: white;
   padding:  20px;
@@ -67,7 +75,7 @@ export function Student() {
   const location = useLocation().pathname;
 
   return (
-    <>
+    <Container>
       <Header />
       <Main>
         <Sidebar>
@@ -91,10 +99,10 @@ export function Student() {
             <NavLinks to="">Summary</NavLinks>
           </Navbar>
         </Sidebar>
-        <Section>
+        <Section className={location.includes("/student/general-info") ? "min" : ""}>
               <Outlet />    
         </Section>
       </Main>
-    </>
+    </Container>
   );
 }

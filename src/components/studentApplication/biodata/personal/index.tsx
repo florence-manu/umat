@@ -14,6 +14,8 @@ display: flex;
 flex-direction: column;
 gap: 70px;
 width: 100%;
+
+
 `
 
 export const Section = styled.div`
@@ -32,6 +34,14 @@ div{
 
   span{
     margin-bottom: 20px;
+    color: #4D4D4D;
+    font-weight: 500;
+  }
+
+  .items{
+    display: flex;
+    direciton: column;
+    gap: 30px;
   }
 }
 
@@ -67,21 +77,21 @@ export function PersonalBio() {
           <div className="image">
             <Image src={upload } alt={upload} />
             </div>
-          <div className="name">{MapInputs(fieldset1Content)}</div>
-          <div>{MapInputs(fieldset2Content)}</div>
+          <div className="name items">{MapInputs(fieldset1Content)}</div>
+          <div className="items">{MapInputs(fieldset2Content)}</div>
         </Section>  
         <Section>
           <div className="birthInfo">
             <span><b>Birth Details</b></span>
-           <div>{MapInputs(fieldset3Content)}</div>
+           <div className="items">{MapInputs(fieldset3Content)}</div>
           </div>
           <div>
             <span><b>National Identity</b></span>
-           <div>{MapInputs(fieldset4Content)}</div>
+           <div className="items">{MapInputs(fieldset4Content)}</div>
           </div>
           <div>
             <span><b>Birth Details</b></span>
-           <div>{MapInputs(fieldset5Content)}</div>
+           <div className="items">{MapInputs(fieldset5Content)}</div>
           </div>
         </Section>
           <div>

@@ -133,7 +133,7 @@ export const Labelled = styled.section`
 display: flex;
 flex-direction: column;
 gap: 10px;
-padding-bottom: 10px;
+padding-bottom: 20px;
 
 input, select{
   width: 90%;
@@ -147,4 +147,8 @@ select{
   width: 40%;
 }
 
+label{
+  color: #03453F;
+  font-size: 14px;
+}
 `

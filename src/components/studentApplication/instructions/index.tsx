@@ -16,6 +16,7 @@ width: 100%;
 
     p{
         color: #C8102E;
+        line-height: 30px;
     }
 }
 `
@@ -32,12 +33,15 @@ gap: 25px;
 width: 100%;
 
 li{
-   display: flex;
 flex-direction: column;
-gap: 15px ;
+gap: 5px ;
 
 span{
     line-height: 30px;
+
+    :first-child{
+        color: #4D4D4D;
+    }
 }
 }
 `
@@ -51,6 +55,7 @@ export function Instructions() {
                 {
                     instructionsContent.map((item) => <li key={item.id}>
                         <span><b>{item.title}</b></span>
+                        <br />
                         <span>{item.message }</span>
                     </li>)
                 }
