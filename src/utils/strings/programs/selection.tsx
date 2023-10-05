@@ -4,7 +4,7 @@ export const fieldset1 = [
     value: "",
     id: "01",
     fieldType: "select",
-        label: "Entry level",
+        labe: "Entry Level",
         width: "100%",
     options: [{
       value: "Bachelors degree",
