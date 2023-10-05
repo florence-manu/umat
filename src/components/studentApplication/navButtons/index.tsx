@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "../../button";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const ButtonsContainer = styled.div`
  display: flex;
@@ -30,14 +30,19 @@ export const Wrapper = styled.div`
 }
 `
 
-export function Buttons() {
-    const location = useLocation().pathname;
+export interface Path {
+  path: string;
+}
+
+export function Buttons({path}:Path) {
+  const location = useLocation().pathname;
+  const navigate = useNavigate();
 
     return (
         <Wrapper>
               <ButtonsContainer className={location.includes("/student/general-info") ? "max" : ""}>
                 <Button color="white" text="save all" width={80} background="#F4C51A" onClick={()=>{""}}/>
-                <Button color="white" text="next" width={80} background="#2DA44E" paddingRight={30} onClick={() => { "" }} />
+                <Button color="white" text="next" width={80} background="#2DA44E" paddingRight={30} onClick={() => { navigate(path)}} />
                 <p>{`>`}</p>
             </ButtonsContainer>
       </Wrapper>

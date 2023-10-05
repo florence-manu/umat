@@ -103,7 +103,7 @@ export function ProgramsSelection() {
                 </div>
                </Preferences>
             </Section2>
-            <Buttons />
+            <Buttons path="/"/>
         </Wrapper>
     )
 }

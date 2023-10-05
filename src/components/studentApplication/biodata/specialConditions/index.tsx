@@ -69,7 +69,7 @@ export function SpecialCondittions() {
           </div>
             </Section>
             <div>
-            <Buttons />
+            <Buttons path="/student/bio-info/documents"/>
           </div>
       </Container>
     )

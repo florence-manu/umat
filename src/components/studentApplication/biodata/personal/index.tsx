@@ -95,7 +95,7 @@ export function PersonalBio() {
           </div>
         </Section>
           <div>
-            <Buttons />
+            <Buttons path="/student/bio-info/family-details"/>
           </div>
       </Container>
     )

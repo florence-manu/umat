@@ -191,7 +191,7 @@ export function EducationalDocuments() {
                    
                </ol>
             </Documents>
-        <Buttons />
+        <Buttons path="/student/programs"/>
         </Container>
     )
 }
