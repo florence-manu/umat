@@ -1,6 +1,16 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import * as yup from 'yup';
+import { useForm, Controller, useFormContext } from 'react-hook-form';
+
+const validationSchema = yup.object().shape({
+  email: yup.string().email('Invalid email format').required('Email is required'),
+  tel: yup.string().matches(/^\d+$/, 'Invalid phone number').required('Phone number is required'),
+  password: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+  number: yup.number().required('Number is required'),
+  text: yup.string().required('Text is required'),
+});
 
 export const InputField = styled.input`
  width: 70%;
@@ -40,29 +50,53 @@ font-weight: lighter;
 font-size: 14px;
 `
 
-export interface InputParamaters{
-    label: string;
-    placeholder?: string;
-    type?: string;
-    value?: string;
-    id: string;
-    onChange?: () => void;
-    width?: string;
-    src?: string;
+
+export interface InputParamaters {
+  label: string;
+  placeholder?: string;
+  type?: string;
+  value?: string;
+  id: string;
+  onChange?: () => void;
+  width?: string;
+  src?: string;
 }
 
-export function Input({label, placeholder,type, id,  width, src, onChange}:InputParamaters) {
-    
-    return (
-        <Container>
-            <Label id={id}>{label}</Label>
-            <div className={src ? "iconified" : ""}>
-                {src && <img src={src } />}
-                <InputField type={type} placeholder={placeholder} style={{width: width}}  />
-            </div>
-           
-        </Container>
-    )
+
+
+export function Input({ label, placeholder, type, id, width, src }: InputParamaters) {
+  const { control, formState } = useFormContext(); // Access the useForm context
+
+  // Check if the field has an error
+  const hasError = formState.errors[id];
+
+  return (
+    <Container>
+      <Label id={id}>{label}</Label>
+      <div className={src ? 'iconified' : ''}>
+        {src && <img src={src} />}
+        <Controller
+          name={id}
+          control={control}
+          defaultValue=""
+          render={({ field }) => (
+            <>
+              <InputField
+                type={type}
+                placeholder={placeholder}
+                style={{
+                  width: width,
+                  // Apply a red border if the field has an error
+                  borderColor: hasError ? 'red' : '#D0D7DE',
+                }}
+                {...field}
+              />
+            </>
+          )}
+        />
+      </div>
+    </Container>
+  );
 }
 
 export const SelectContainer = styled.div`

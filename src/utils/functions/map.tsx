@@ -2,43 +2,47 @@ import { Input, Select, SelectParamaters } from "../../components/inputFields/in
 import { OptionContent } from "../../components/inputFields/input";
 import { Radio } from "../../components/inputFields/input";
 import { SingleRadio } from "../../components/inputFields/input";
+import { useFormContext } from 'react-hook-form';
 
-export interface Item{
-    id: string;
-    fieldType: string;
-    inputType?: string;
-    value?: string;
-    label: string;
-    src?: string;
-    options?: OptionContent[];
-    placeholder?: string;
-   onChange?: () => void;
+export interface Item {
+  id: string;
+  fieldType: string;
+  inputType?: string;
+  value?: string;
+  label: string;
+  src?: string;
+  options?: OptionContent[];
+  placeholder?: string;
+  onChange?: () => void;
   width?: string;
   Radio?: SingleRadio[];
 }
 
 export interface InputContents {
-    content: Item[];
+  content: Item[];
 }
 
 export function MapInputs({ content }: InputContents) {
+  const { control, formState } = useFormContext(); // Access the useForm context
+
   return (
     content.map((item) => {
       if (item.fieldType === "input") {
+        const { id, label, onChange, placeholder, value, inputType, width, src } = item;
         return (
           <Input
-            id={item.id}
-            label={item.label}
-            onChange={item.onChange}
-            placeholder={item.placeholder}
-            value={item.value}
-            type={item.inputType}
-            key={item.id}
-            width={item.width}
-            src={item.src}
+            id={id}
+            label={label}
+            onChange={onChange}
+            placeholder={placeholder}
+            value={value}
+            type={inputType}
+            key={id}
+            width={width}
+            src={src}
           />
         );
-      } else if(item.fieldType === "select"){
+      } else if (item.fieldType === "select") {
         return (
           <Select
             id={item.id}
@@ -54,7 +58,7 @@ export function MapInputs({ content }: InputContents) {
             RadioOptions={item.Radio}
             Label={item.label}
           />
-         )
+        );
       }
     })
   );
