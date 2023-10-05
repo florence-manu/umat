@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 export const InputField = styled.input`
@@ -133,6 +134,11 @@ export const RadioContainer = styled.div`
     font-size: 13.5px;
     color: #57606A;
  }
+
+ .max{
+    width: 30px;
+    margin-left: -20px;
+ }
 `
 
 
@@ -167,6 +173,9 @@ export interface RadioOptions{
 
 
 export function Radio({ RadioOptions, Label }: RadioOptions) {
+    const location = useLocation().pathname;
+
+
     return (
         <RadioWrapper>
                 <p>{Label}:</p>
@@ -177,6 +186,7 @@ export function Radio({ RadioOptions, Label }: RadioOptions) {
           type="radio"
           id={item.id1}
                             value={item.value}
+         className={location.includes("/student/education/instituitions") ? "max" : ""}
         />
          <label htmlFor={item.id1 } id={item.id2}>
          {item.label}

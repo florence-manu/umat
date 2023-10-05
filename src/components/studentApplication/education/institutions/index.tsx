@@ -96,13 +96,27 @@ export const InputsWrapper = styled.div`
 display: flex;
 flex-direction: column;
 gap: 30px;
-`
 
+.nationality{
+
+    input{
+    background: red;
+
+    }
+}
+`
 export const Inputs = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 10px;
+gap: 30px;
+
+.inst{
+    height: 60px;
+    input{
+        height: 35px;
+    }
+}
 `
 
 export const Section = styled.div`
@@ -110,6 +124,7 @@ export const Section = styled.div`
  display: flex;
  flex-direction: row;
 justify-content: space-between;
+
 ` 
 export const ButtonsContainer = styled.div`
   display: flex;
@@ -169,14 +184,14 @@ export function Institutions() {
     return (
         <Container>
             <InputsWrapper>
-                <Section>
+                <Section className="nationality">
                     {MapInputs(Nationality)}
                   </Section>
                 <Inputs>
                      <Section>
                     {MapInputs(Completion)}
                 </Section>
-                     <Section>
+                     <Section className="inst">
                     {MapInputs(institiution)}
                 </Section>
                      <Section>
