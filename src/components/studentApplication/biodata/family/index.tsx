@@ -12,6 +12,14 @@ display: flex;
 flex-direction: column;
 gap: 70px;
 width: 100%;
+
+.emergency{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 90%;
+  margin-top: -30px;
+}
 `
 
 export const Section = styled.div`
@@ -21,23 +29,19 @@ align-items: flex-start;
 width: 100%;
 justify-self: center;
 gap: 10%;
-padding-left: 5%;
-
 
 div{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 97%;
   gap: 20px;
 
   span{
     margin-bottom: 20px;
+    color: #4D4D4D;
   }
 }
 
-//  .birthInfo{
-//   padding-left: 5%;
-// }
 `
 
 export function FamilyDetails() {
@@ -70,8 +74,10 @@ export function FamilyDetails() {
             <div>{MapInputs(fatherDetails)}</div>
           </div>
         </Section>  
-            <Section><span><b>Emergency Contact</b></span></Section>
-        <Section>
+        <Section className="heading">
+           <div><span><b>Emergency Contact</b></span></div>
+            </Section>
+        <Section className="emergency">
           <div>
              <div>{MapInputs(Emergency1)}</div>
           </div>

@@ -112,6 +112,10 @@ img{
         li{
             padding-bottom: 10px;
             font-size: 14px;
+
+            .heading{
+                color: #4D4D4D;
+            }
         }
     }
     
@@ -129,16 +133,16 @@ ol{
    flex-direction: column;
    gap: 20px;
 
+
      .birth{
       b{
        margin-bottom: 20px !important;
+       color: #4D4D4D;
     }
+   }
 
-    .identification{
-        display: flex;
-        flex-direction: column;
-        gap: 20px !important;
-    }
+   .heading{
+       color: #4D4D4D;
    }
 }
 `
@@ -165,11 +169,11 @@ export function BioDocuments() {
                         <b>Drivers Licence</b>
                     </option>
                 </select>
-                     </div>
+                    </div>
                     <img src={uploadDocs} alt="upload" />
                 </div>
                 <div className="required">
-                    <p><b>Required Documents</b></p>
+                    <p className="heading"><b>Required Documents</b></p>
                     <ol>
                         <li>Birth Certificate</li>
                         <li> ID Card</li>
@@ -179,10 +183,10 @@ export function BioDocuments() {
             <Documents>
                 <ol>
                     <li className="birth">
-                        <b>Birth Certificate</b>
+                        <b className="heading">Birth Certificate</b>
                          <Document name="Birth Certificate" />
                    </li>
-                    <li className="identification">
+                    <li className="heading">
                         <b>Identification Documents</b>
                          <Document name="Birth Certificate" />
                          <Document name="Birth Certificate" />

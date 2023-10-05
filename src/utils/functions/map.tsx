@@ -9,6 +9,7 @@ export interface Item{
     inputType?: string;
     value?: string;
     label: string;
+    src?: string;
     options?: OptionContent[];
     placeholder?: string;
    onChange?: () => void;
@@ -34,6 +35,7 @@ export function MapInputs({ content }: InputContents) {
             type={item.inputType}
             key={item.id}
             width={item.width}
+            src={item.src}
           />
         );
       } else if(item.fieldType === "select"){

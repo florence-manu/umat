@@ -12,6 +12,7 @@ export const fieldset1=[
         label: "Phone Number",
         value: "",
         placeholder: "+2335654321",
+         src: require("../../../images/ghanaFlag.png"),
         inputType: "tel",
         fieldType: "input",
         id: "02",
@@ -70,6 +71,7 @@ export const fieldset5 = [
     {
         label: "Phone Number",
         value: "",
+         src: require("../../../images/ghanaFlag.png"),
         placeholder: "+2335654321",
         inputType: "tel",
         fieldType: "input",

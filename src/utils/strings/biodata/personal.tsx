@@ -158,6 +158,8 @@ export const fieldset4 = [
         fieldType: "input",
         id: "02",
         width: "100%",
+        src: require("../../../images/ghanaFlag.png")
+        
     },
     {
         label: "Other Phone Number",

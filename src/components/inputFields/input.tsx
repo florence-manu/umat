@@ -15,9 +15,20 @@ display: flex;
 flex-direction: column;
 width: 100%;
 
+.iconified{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+
+    img{
+        height: 25px;
+        width: 35px;
+    }
+}
 
 ::placeholder{
-    color: #6E7781;
+    color: #24292F;
     font-weight: regular;
 }
 `
@@ -36,14 +47,19 @@ export interface InputParamaters{
     id: string;
     onChange?: () => void;
     width?: string;
+    src?: string;
 }
 
-export function Input({label, placeholder,type, id,  width, onChange}:InputParamaters) {
+export function Input({label, placeholder,type, id,  width, src, onChange}:InputParamaters) {
     
     return (
         <Container>
             <Label id={id}>{label}</Label>
-            <InputField type={type} placeholder={placeholder} style={{width: width}}  />
+            <div className={src ? "iconified" : ""}>
+                {src && <img src={src } />}
+                <InputField type={type} placeholder={placeholder} style={{width: width}}  />
+            </div>
+           
         </Container>
     )
 }
@@ -115,6 +131,7 @@ export const RadioContainer = styled.div`
 
  label{
     font-size: 13.5px;
+    color: #57606A;
  }
 `
 
@@ -159,7 +176,7 @@ export function Radio({ RadioOptions, Label }: RadioOptions) {
           <input
           type="radio"
           id={item.id1}
-          value={item.value}
+                            value={item.value}
         />
          <label htmlFor={item.id1 } id={item.id2}>
          {item.label}

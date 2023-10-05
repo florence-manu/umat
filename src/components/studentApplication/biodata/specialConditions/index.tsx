@@ -31,6 +31,7 @@ div{
 
   span{
     margin-bottom: 20px;
+    color: #4D4D4D;
   }
 }
 .background-check{
@@ -62,7 +63,7 @@ export function SpecialCondittions() {
           </div>
             </Section>
             <Section>
-                <div className="background-check">
+              <div className="background-check">
             <span><b>Background check</b></span>
             <div>{MapInputs(background)}</div>
           </div>
