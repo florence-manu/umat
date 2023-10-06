@@ -26,7 +26,7 @@ export function Routing() {
     return (
       <Router>
         <Routes>
-          <Route path="/umat" element={<LandingPage/>}>
+              <Route path="/umat" element={<LandingPage/>}>
             <Route path="" element={<Login/>} />
             <Route path="buy-pin" element={<BuyPin />} >
               <Route path="" element={<ProvidePersonalDetails />} />
