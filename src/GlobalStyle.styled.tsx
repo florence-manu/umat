@@ -22,7 +22,6 @@ export default createGlobalStyle`
   
 .active{
     border-bottom: 2px solid #F4C51A;
-
 }
 
 select{

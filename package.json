@@ -1,4 +1,4 @@
-{ 
+{
   "homepage": "https://eben-arkoh-amoah.github.io/umat",
   "name": "umat",
   "version": "0.1.0",
@@ -28,19 +28,40 @@
     "yup": "^1.3.1"
   },
   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build",
-     "precommit": "npm run buid",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "precommit": "npm run buid",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build",
+      "pre-push": "npm run buid"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "gh-pages": "^6.0.0"
+    }
   },
   "browserslist": {
     "production": [
@@ -53,8 +74,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.0.0"
   }
 }
