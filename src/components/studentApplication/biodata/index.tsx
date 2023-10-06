@@ -19,7 +19,7 @@ background-color: #F0F0F0;
 }
 `
 export const NavbarContainer = styled.nav`
-
+   width: 200%;
 a{
     text-decoration: none;
     color: #4D4D4D;
