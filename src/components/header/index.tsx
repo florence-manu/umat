@@ -21,7 +21,7 @@ export function ApplicationLinks() {
           <Styles.Nav>
             <li className="link">
                 <Link
-                    to="/student/instructions"
+                    to="/umat/student/instructions"
                     className={location.includes("/student/instructions") ? "side-bar-active" : ""}
                 >
                     Instructions
@@ -29,7 +29,7 @@ export function ApplicationLinks() {
             </li>
             <li className="link">
                 <Link
-                    to="/student/programs"
+                    to="/umat/student/programs"
                        className={location.includes("/student/programs") ? "side-bar-active" : ""}
                 >
                     Programs

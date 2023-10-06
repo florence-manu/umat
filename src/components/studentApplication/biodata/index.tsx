@@ -36,18 +36,18 @@ export function Biodata() {
             <div className="wrapper">
                 <NavbarContainer>
                     <Link
-                        to={"/student/bio-info/personal"}
+                        to={"/umat/student/bio-info/personal"}
                         className={location.includes("/student/bio-info/personal") ? "active" : ""}
                     >
                         Personal
                     </Link>
-                    <Link to={"/student/bio-info/family-details"}
+                    <Link to={"/umat/student/bio-info/family-details"}
                          className={location.includes("/student/bio-info/family-details") ? "active" : ""}
                     >Family Contacts</Link>
-                    <Link to={"/student/bio-info/special-conditions"}
+                    <Link to={"/umat/student/bio-info/special-conditions"}
                     className={location.includes("/student/bio-info/special-conditions") ? "active" : ""}    
                     >Special Conditions</Link>
-                    <Link to={"/student/bio-info/documents"}
+                    <Link to={"/umat/student/bio-info/documents"}
                         className={location.includes("/student/bio-info/documents") ? "active" : ""} 
                     >Documents</Link>
             </NavbarContainer>

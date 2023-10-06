@@ -194,7 +194,7 @@ export function BioDocuments() {
                    
                </ol>
             </Documents>
-        <Buttons path="/student/education"/>
+        <Buttons path="/umat/student/education"/>
         </Container>
     )
 }

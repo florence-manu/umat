@@ -23,7 +23,7 @@ export function Login() {
             background="#62F0E4"
             text="Buy Your Pin"
             onClick={() => {
-              navigation("/buy-pin");
+              navigation("/umat/buy-pin");
             }}
           />
         </styles.ButtonContainer>
@@ -42,7 +42,7 @@ export function Login() {
             <input type="text" placeholder="465656" />
           </div>
           <Button text="LOGIN" width={300} background="#0A7C72" color="white"  onClick={() => {
-              navigation("/student");
+              navigation("/umat/student");
             }}/>
         </styles.Form>
       </styles.LoginSection>

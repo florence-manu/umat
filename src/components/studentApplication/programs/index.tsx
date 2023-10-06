@@ -32,13 +32,13 @@ export function Programs() {
             <div className="wrapper">
                 <NavbarContainer>
                     <Link
-                        to={"/student/programs programs-selection"}
+                        to={"/umat/student/programs programs-selection"}
                         className={location.includes("/student/programs/programs-selection") ? "active" : ""}
                     >
                        programs selection 
                     </Link>
-                    <Link to={"/student/programs/accomodation"}
-                       className={location.includes("/student/programs/accomodation") ? "active" : ""}
+                    <Link to={"/umat/student/programs/accomodation"}
+                       className={location.includes("/umat/student/programs/accomodation") ? "active" : ""}
                     >accomodation</Link>
             </NavbarContainer>
             </div>

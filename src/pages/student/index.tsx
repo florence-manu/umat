@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import { Header } from "../../components/header";
 import { Outlet } from "react-router-dom";
 
 export const Main = styled.main`
@@ -75,27 +74,26 @@ export function Student() {
 
   return (
     <Container>
-      <Header />
       <Main>
         <Sidebar>
           <Rainbow></Rainbow>
           <Navbar>
-            <NavLinks to="/student/general-info"
+            <NavLinks to="/umat/student/general-info"
              className = {location.includes("/student/general-info") ? "side-bar-active" : ""}
             >General</NavLinks>
-            <NavLinks to="/student/bio-info"
+            <NavLinks to="/umat/student/bio-info"
                 className = {location.includes("/student/bio-info") ? "side-bar-active" : ""}
             >Bio data</NavLinks>
-            <NavLinks to="/student/education"
+            <NavLinks to="/umat/student/education"
                 className = {location.includes("/student/education") ? "side-bar-active" : ""}
             >Education</NavLinks>
             <NavLinks
-              to="/student/programs"
+              to="/umat/student/programs"
               className = {location.includes("/student/programs") ? "side-bar-active" : ""}
             >
               Programs
             </NavLinks>
-            <NavLinks to="">Summary</NavLinks>
+            <NavLinks to="/umat">Summary</NavLinks>
           </Navbar>
         </Sidebar>
         <Section className={location.includes("/student/general-info") ? "min" : ""}>

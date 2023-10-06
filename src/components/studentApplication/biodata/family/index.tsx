@@ -89,7 +89,7 @@ export function FamilyDetails() {
           </div>
         </Section>
           <div>
-            <Buttons path="/student/bio-info/special-conditions"/>
+            <Buttons path="/umat/student/bio-info/special-conditions"/>
           </div>
       </Container>
     )

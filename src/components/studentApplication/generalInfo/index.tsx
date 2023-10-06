@@ -62,7 +62,7 @@ export function GeneralInfo() {
       <Fieldset>
         {MapInputs(inputContents)}
       </Fieldset>
-      <Buttons path="/student/bio-info"/>
+      <Buttons path="/umat/student/bio-info"/>
     </Container>
   );
 }

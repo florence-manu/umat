@@ -45,7 +45,7 @@ export function Step1(){
               width={200}
               weight="bold"
               background="#009688"
-              onClick={()=>{navigation("/buy-pin/payment")}}
+              onClick={()=>{navigation("/umat/buy-pin/payment")}}
             />
           </Container>
     )

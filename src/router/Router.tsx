@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { LandingPage } from "../pages/landing";
+import { LandingPage } from "../pages/Landing";
 import { BuyPin } from "../components/buyPin";
-import { Login } from "../components/login";
+import { Login } from "../components/Login";
 import { ProvidePersonalDetails } from "../components/buyPin/GhanaianStudent/personalDetails";
 import { Payment } from "../components/buyPin/GhanaianStudent/payments";
 import { Successful } from "../components/buyPin/credentials";
@@ -26,15 +26,14 @@ export function Routing() {
     return (
       <Router>
         <Routes>
-              <Route path="/umat" element={<LandingPage/>}>
+          <Route path="/umat" element={<LandingPage/>}>
             <Route path="" element={<Login/>} />
             <Route path="buy-pin" element={<BuyPin />} >
               <Route path="" element={<ProvidePersonalDetails />} />
               <Route path="payment" element={<Payment /> } />
               <Route path="successful" element={<Successful /> } />
             </Route>
-          </Route>
-          <Route path="/student" element={<Student />} >
+           <Route path="student" element={<Student />} >
             <Route path="" element={<Navigate to="instructions" /> } />
             <Route path="instructions" element={<Instructions /> } />
             <Route path="general-info" element={<GeneralInfo />} />
@@ -56,6 +55,7 @@ export function Routing() {
               <Route path="programs-selection" element={<ProgramsSelection /> } />
             </Route>
             </Route>
+        </Route>
         </Routes>
       </Router>
     );

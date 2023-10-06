@@ -220,7 +220,7 @@ export function Institutions() {
             </InputsWrapper>
             <Card items={institutions} heading="Education Records"/>
             </Wrapper>
-            <Buttons path="/student/education/exams-results"/>
+            <Buttons path="/umat/student/education/exams-results"/>
         </Container>
     )
 }

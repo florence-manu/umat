@@ -76,7 +76,7 @@ export function Successful() {
                 <p>These credentials has been sent to your email <span className="email"><b>thomasilla@gmail.com</b></span>
                 </p>
                 <div>
-                    <Link to="/">Click here to login</Link>
+                    <Link to="/umat">Click here to login</Link>
                     </div>
             </Credentials>
             <div>
