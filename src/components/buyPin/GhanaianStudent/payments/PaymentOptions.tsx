@@ -36,7 +36,7 @@ function PaymentOptions({ onPaymentMethodChange }: PaymentOptionsProps) {
           name="payment-option"
           onChange={handleOptionChange}
         />
-        <label htmlFor="mobile" id="momo">
+        <label htmlFor='mobile' id='momo' >
           Mobile money
         </label>
       </Styles.SelectNationality>
