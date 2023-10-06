@@ -5,7 +5,6 @@ import { Header } from "../../components/Header";
 import { Outlet } from "react-router-dom";
 
 export const Main = styled.main`
-//   background-color: #62F0E4;
   display: flex;
   align-items: flex-start;
   flex-direction: row;
