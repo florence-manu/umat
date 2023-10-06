@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import { Header } from "../../components/Header";
+import { Header } from "../../components/header";
 import { Outlet } from "react-router-dom";
 
 export const Main = styled.main`

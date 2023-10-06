@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { LandingPage } from "../pages/Landing";
+import { LandingPage } from "../pages/landing";
 import { BuyPin } from "../components/buyPin";
-import { Login } from "../components/Login";
+import { Login } from "../components/login";
 import { ProvidePersonalDetails } from "../components/buyPin/GhanaianStudent/personalDetails";
 import { Payment } from "../components/buyPin/GhanaianStudent/payments";
 import { Successful } from "../components/buyPin/credentials";
